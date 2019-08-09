@@ -6,7 +6,6 @@ RUN /opt/jboss/wildfly/bin/add-user.sh admin 1234 --silent
 ####################################################################################
 # INSTALL DB2 DRIVER
 ####################################################################################
-ENV MYSQL_CONNECTOR_VERSION 8.0.17
 ADD ./db2.jar /opt/jboss/db2.jar
 RUN mkdir -p META-INF/services
 RUN echo "com.ibm.db2.jcc.DB2Driver" > META-INF/services/java.sql.Driver 
