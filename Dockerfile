@@ -6,7 +6,7 @@ RUN /opt/jboss/wildfly/bin/add-user.sh admin 1234 --silent
 ####################################################################################
 # INSTALL DB2 DRIVER
 ####################################################################################
-ADD ./db2.jar /opt/jboss/db2.jar
+ADD ./db2jcc4.jar /opt/jboss/db2.jar
 RUN mkdir -p META-INF/services
 RUN echo "com.ibm.db2.jcc.DB2Driver" > META-INF/services/java.sql.Driver 
 RUN jar uf /opt/jboss/db2.jar META-INF
