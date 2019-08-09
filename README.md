@@ -1,7 +1,7 @@
 # Wildfly-DB2
 
 ## Wildfly
-Version: 16.0.0.Final
+Version: 14.0.1.Final
 
 ## DB2 Driver
 Version: JDBC4 - 4.19
