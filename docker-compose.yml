@@ -6,8 +6,8 @@ services:
         ports:
           - "8080:8080"
           - "9990:9990"
-        # volumes:
-            # - ./docker-vols/data:/tmp
+        volumes:
+            - ./docker-vols/tmp:/tmp
         command: /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
         environment:
             DB2_DATASOURCE_NAME: db2ds
@@ -22,19 +22,7 @@ services:
     db2:
         restart: always
         image: ignatov/db2
-        # volumes:
-            # - ./docker-vols/database:/database
+        volumes:
+            - ./docker-vols/database:/database
         ports:
           - "50000:50000"
-
-    # db2:
-    #     restart: always
-    #     image: ibmcom/db2
-    #     environment:
-    #         LICENSE: accept
-    #         DB2INST1_PASSWORD: example
-    #         DBNAME: testdb
-    #     volumes:
-    #         - ./docker-vols/database:/database
-    #     ports:
-    #       - "50000:50000"
