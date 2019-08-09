@@ -7,7 +7,7 @@ Version: 14.0.1.Final
 Version: JDBC4 - 4.19
 
 ## docker-compose example
-```
+```Dockerfile
 version: "3.7"
 services:
     wildfly:
@@ -35,10 +35,11 @@ services:
         volumes:
             - ./docker-vols/database:/database
         ports:
-          - "50000:50000"```
+          - "50000:50000"
+```
 
 ## Dockerfile example for new project
-```
+```Dockerfile
 ####################################################################################
 # BASE IMAGE
 ####################################################################################
